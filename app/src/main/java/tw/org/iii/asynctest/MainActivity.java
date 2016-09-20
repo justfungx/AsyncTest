@@ -17,6 +17,7 @@ private TextView masg;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+       masg = (TextView)findViewById(R.id.masg);
 
     }
     public void test1(View v){
@@ -29,7 +30,7 @@ private TextView masg;
     }
     }
 
-    private class MyTask extends AsyncTask<String ,Void,Void>{
+    private class MyTask extends AsyncTask<String ,Object,Void>{
 
 
         @Override
@@ -62,9 +63,10 @@ private TextView masg;
         }
 
         @Override
-        protected void onProgressUpdate(Void... values) {
+        protected void onProgressUpdate(Object... values) {
             super.onProgressUpdate(values);
             Log.d("DK","doInBackground");
+            masg.setText((Integer)values[0] + ":" + (String)values[1]);
         }
 
         @Override
