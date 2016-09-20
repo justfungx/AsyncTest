@@ -13,6 +13,23 @@
         android:id="@+id/test1"
         android:onClick="test1"
         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test2"
+        android:onClick="test2"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test3"
+        android:onClick="test3"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img"
+        />
     <TextView
         android:id="@+id/masg"
         android:text="Hello World!"
